@@ -9,7 +9,14 @@ class Graph(object):
 
         # the size of one cell in pixels
         self.cell_size = 20
+    
+    def addVector(self, vector: object) -> None:
+        self.vectors.append(vector)
 
+    def setCellSize(self, size: int) -> None:
+        if size <= 100:
+            self.cell_size = size
+    
     def run(self) -> None:
         arcade.open_window(SQUARE, SQUARE, "Graph")
         arcade.set_background_color(arcade.color.WHITE)
@@ -58,10 +65,3 @@ class Graph(object):
         x = vector.getX()
         y = vector.getY()
         arcade.draw_line(start_x = center, start_y = center, end_x = center + x * size, end_y = center + y * size, color = arcade.color.RED, line_width = 2.5)
-
-    def addVector(self, vector: object) -> None:
-        self.vectors.append(vector)
-
-    def setCellSize(self, size: int) -> None:
-        if size <= 100:
-            self.cell_size = size
