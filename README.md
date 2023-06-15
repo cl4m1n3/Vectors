@@ -7,7 +7,7 @@ The initial template with instructions is presented below:
 **Please note to take the code from the files render.py and vector.py , they should be located in the same folder as your python executable**
 
 ```Python
-# importing the vector2 module
+# importing the vector module
 import vector
 
 # importing the render module
