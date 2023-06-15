@@ -26,4 +26,3 @@ r.addVector(v)
 # launching the graph
 r.run()
 ```
-** 
