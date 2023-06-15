@@ -5,7 +5,8 @@ This is a test project that allows you to display a graph of an eigenvector on t
 The initial template with instructions is presented below:
 
 **Please note to take the code from the files render.py and vector.py , they should be located in the same folder as your python executable**
-```
+
+```Python
 # importing the vector2 module
 import vector
 
