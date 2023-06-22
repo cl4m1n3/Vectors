@@ -10,6 +10,21 @@ class Location(object):
         self.yaw = yaw
         self.pitch = pitch
 
+    def getX(self) -> float:
+        return self.x
+
+    def getY(self) -> float:
+        return self.y
+
+    def getZ(self) -> float:
+        return self.z
+
+    def getYaw(self) -> float:
+        return self.yaw
+
+    def getPitch(self) -> float:
+        return self.pitch
+
     def getDirectionVector(self) -> object:
         y = -sin(radians(self.pitch))
         xz = cos(radians(self.pitch))
@@ -34,5 +49,9 @@ class Location(object):
         if (yaw < 0):
             yaw += 360.0
 
+        self.yaw = yaw
+        self.pitch = pitch
+
+    def setRotation(self, yaw: float, pitch: float) -> None:
         self.yaw = yaw
         self.pitch = pitch
