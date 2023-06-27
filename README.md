@@ -101,3 +101,33 @@ graph.addVector(direction)
 # launching the graph
 graph.run()
 ```
+
+## Motion
+Adding movement to the chart
+
+```Python
+# importing the space module
+from space import *
+
+# importing the render module
+from render import *
+
+# the point where the movement started from
+start = Location(x = 3, y = 3, z = 3)
+
+# the point where the movement ended
+end = Location(x = 6, y = 6, z = 6)
+
+# сreating a movement
+# if you do not specify the starting point in the arguments of the class, then by default it will be 0
+motion = Motion(end, start)
+
+# creating a new graph
+graph = Graph()
+
+# adding a movement to a graph
+graph.addMotion(motion)
+
+# launching the graph
+graph.run()
+```
