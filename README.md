@@ -62,6 +62,7 @@ graph.run()
 <br>
 <br>
 How to look at a point
+
 ```Python
 # importing the space module
 from space import *
