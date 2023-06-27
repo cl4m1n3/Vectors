@@ -17,12 +17,11 @@ from vector import *
 from render import *
 
 
-
 # creating a new vector
 vector = Vector2(x = 1, y = 2)
 
 # creating a new graph
-graph = render.Graph()
+graph = Graph()
 
 # adding a vector to a graph
 graph.addVector(vector)
