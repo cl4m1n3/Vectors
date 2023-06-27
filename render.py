@@ -21,7 +21,7 @@ class Graph(object):
 
     def addRoute(self, route: object) -> None:
         self.routes.append(route)
-    
+
     def setCellSize(self, size: int) -> None:
         if size <= 100:
             self.cell_size = size

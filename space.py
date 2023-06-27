@@ -13,14 +13,29 @@ class Location:
     def getX(self) -> float:
         return self.x
 
+    def setX(self, value: float) -> object:
+        return Location(value, self.y, self.z)
+
     def getY(self) -> float:
         return self.y
+
+    def setY(self, value: float) -> object:
+        return Location(self.x, value, self.z)
 
     def getZ(self) -> float:
         return self.z
 
+    def setZ(self, value: float) -> object:
+        return Location(self.x, self.y, value)
+
     def getYaw(self) -> float:
         return self.yaw
+
+    def setYaw(self, value: float) -> None:
+        return Location(self.x, self.y, self.z, value, self.pitch)
+
+    def setPicth(self, value: float) -> None:
+        return Location(self.x, self.y, self.z, self.yaw, value)
 
     def getPitch(self) -> float:
         return self.pitch
@@ -66,13 +81,13 @@ class Motion:
 
     def getStartPoint(self) -> object:
         return self.start_point
-    
+
     def setStartPoint(self, point: object) -> None:
         self.start_point = point
 
     def getEndPoint(self) -> object:
         return self.end_point
-    
+
     def setEndPoint(self, point: object) -> None:
         self.end_point = point
 
@@ -80,7 +95,7 @@ class Motion:
         start = self.start_point
         end = self.end_point
         return sqrt(((start.x - end.x) ** 2) + ((start.y - end.y) ** 2) + ((start.z - end.z) ** 2))
-    
+
 class Route:
 
     def __init__(self) -> None:
@@ -96,3 +111,47 @@ class Route:
 
     def getMotions(self) -> list:
         return self.motions
+
+    def left(self, distance: float) -> None:
+        if len(self.motions) > 0:
+            motion = self.motions[-1]
+            m = Motion(Location(0, 0, 0))
+            m.setStartPoint(motion.getEndPoint())
+            m.setEndPoint(m.getStartPoint().setX(m.getStartPoint().getX() - distance))
+            self.motions.append(m)
+            return
+
+        self.motions.append(Motion(Location(0 - distance, 0, 0)))
+
+    def right(self, distance: float) -> None:
+        if len(self.motions) > 0:
+            motion = self.motions[-1]
+            m = Motion(Location(0, 0, 0))
+            m.setStartPoint(motion.getEndPoint())
+            m.setEndPoint(m.getStartPoint().setX(m.getStartPoint().getX() + distance))
+            self.motions.append(m)
+            return
+
+        self.motions.append(Motion(Location(distance, 0, 0)))
+
+    def forward(self, distance: float) -> None:
+        if len(self.motions) > 0:
+            motion = self.motions[-1]
+            m = Motion(Location(0, 0, 0))
+            m.setStartPoint(motion.getEndPoint())
+            m.setEndPoint(m.getStartPoint().setY(m.getStartPoint().getY() + distance))
+            self.motions.append(m)
+            return
+
+        self.motions.append(Motion(Location(0, distance, 0)))
+
+    def back(self, distance: float) -> None:
+        if len(self.motions) > 0:
+            motion = self.motions[-1]
+            m = Motion(Location(0, 0, 0))
+            m.setStartPoint(motion.getEndPoint())
+            m.setEndPoint(m.getStartPoint().setY(m.getStartPoint().getY() - distance))
+            self.motions.append(m)
+            return
+
+        self.motions.append(Motion(Location(0, 0 - distance, 0)))
