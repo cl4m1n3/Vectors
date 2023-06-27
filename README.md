@@ -8,6 +8,16 @@ The initial template with instructions is presented below:
 <br>
 <br>
 
+## Graph
+The graph allows you to display all your work in the form of a beautiful picture
+<br>
+So far, the graph only allows you to change the size of the cell in pixels
+
+```Python
+# setting the cell size to 10 pixels
+Graph().setCellSize(10)
+```
+
 ## Vector
 Adding a vector to a graph
 ```Python
@@ -59,7 +69,6 @@ graph.addVector(direction)
 # launching the graph
 graph.run()
 ```
-<br>
 <br>
 How to look at a point
 
