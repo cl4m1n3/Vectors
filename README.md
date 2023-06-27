@@ -7,9 +7,6 @@ The initial template with instructions is presented below:
 **Please note to take the code from the files render.py and vector.py , they should be located in the same folder as your python executable**
 <br>
 <br>
-- Motion(Location(3, 3, 3))
-- xr
-- xr
 
 ## Graph
 The graph allows you to display all your work in the form of a beautiful picture
