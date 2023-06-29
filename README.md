@@ -150,3 +150,34 @@ route.left(5)
 # rectilinear right movement of 5 cells / meters
 route.right(5)
 ```
+
+### Example
+making a route
+```Python
+# importing the space module
+from space import *
+
+# importing the render module
+from render import *
+
+# creating a new route
+route = Route()
+
+# adding to the route that allows you to move to the coordinates (5, 5, 5)
+route.addMotion(Motion(Location(x = 5, y = 5, z = 5)))
+
+# adding 4 movements that allow you to visually make a square
+route.left(3)
+route.forward(3)
+route.right(3)
+route.back(3)
+
+# creating a new graph
+graph = Graph()
+
+# adding a route to a graph
+graph.addRoute(route)
+
+# launching the graph
+graph.run()
+```
