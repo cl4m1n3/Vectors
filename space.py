@@ -50,7 +50,8 @@ class Location:
 
     def getDirectionPlane(self) -> object:
         return Vector2(-cos(radians(self.yaw) - pi / 2), -sin(radians(self.yaw) - pi / 2)).normalize()
-
+    
+    ''' point : Location|Vector3 '''
     def lookAt(self, point: object) -> None:
         horizontal = sqrt((point.x - self.x) ** 2 + (point.z - self.z) ** 2)
         vertical = point.y - self.y
@@ -73,21 +74,23 @@ class Location:
 
 class Motion:
 
+    ''' end_point : Location|Vector3 '''
     def __init__(self, end_point: object, start_point = Location(0, 0, 0)) -> None:
 
-        # var Vector3 | Location
         self.start_point = start_point
         self.end_point = end_point
 
     def getStartPoint(self) -> object:
         return self.start_point
 
+    ''' point : Location|Vector3 '''
     def setStartPoint(self, point: object) -> None:
         self.start_point = point
 
     def getEndPoint(self) -> object:
         return self.end_point
-
+    
+    ''' point : Location|Vector3 '''
     def setEndPoint(self, point: object) -> None:
         self.end_point = point
 
@@ -101,6 +104,7 @@ class Route:
     def __init__(self) -> None:
         self.motions = []
 
+    ''' motion : Motion '''
     def addMotion(self, motion: object) -> None:
         if len(self.motions) > 0:
             motion.setStartPoint(self.motions[-1].getEndPoint())
