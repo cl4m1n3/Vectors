@@ -131,3 +131,22 @@ graph.addMotion(motion)
 # launching the graph
 graph.run()
 ```
+
+## Route
+### The main functions of the movement
+
+```Python
+route = Route()
+
+# rectilinear forward movement of 5 cells / meters
+route.forward(5)
+
+# rectilinear back movement of 5 cells / meters
+route.back(5)
+
+# rectilinear left movement of 5 cells / meters
+route.left(5)
+
+# rectilinear right movement of 5 cells / meters
+route.right(5)
+```
