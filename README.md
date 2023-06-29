@@ -181,3 +181,5 @@ graph.addRoute(route)
 # launching the graph
 graph.run()
 ```
+
+https://docs.google.com/presentation/d/1ZkFncAPA1thvLFnxkQJ-X4DiKYDzA_jK/edit?usp=sharing&ouid=109575116193096732086&rtpof=true&sd=true
