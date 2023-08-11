@@ -5,6 +5,7 @@ Also, this project supports the control of unmanned aerial vehicles using these 
 <br>
 <br>
 functions for operations on vectors:
+
 <br>
 **Default**
 - addVector(vector: object) - adds another vector to the vector
