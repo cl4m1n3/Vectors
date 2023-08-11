@@ -7,7 +7,9 @@ Also, this project supports the control of unmanned aerial vehicles using these 
 functions for operations on vectors:
 
 <br>
+
 **Default**
+
 - addVector(vector: object) - adds another vector to the vector
 - subtractVector(vector: object) - subtracts a vector from your vector
 - multiply(number: float) - multiplies a vector by a certain number
@@ -18,10 +20,13 @@ functions for operations on vectors:
 - lenght() - displays the length of the vector
 <br>
   **Vector2**
+  
 - add(x: float, y: float) - adds coordinates to the vector
 - subtract(x: float, y: float) - subtracts coordinates from the vector
 <br>
+
   **Vector3**
+  
 - add(x: float, y: float, z: float) - adds coordinates to the vector
 - subtract(x: float, y: float, z: float) - subtracts coordinates from the vector
 - cross(vector: object) - crosses a vector with another vector
