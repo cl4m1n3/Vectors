@@ -6,7 +6,9 @@
 ─╚╗╔╝─║╚══╗║╚═╝║──║║──║╚═╝║║║║╚╗║╚═╝║
 ──╚╝──╚═══╝╚═══╝──╚╝──╚═══╝╚╝╚═╝╚═══╝
 
-API-VERSION: 1.0.0
+API-VERSION: 1.1.0
+
+SUPPORTED VERSIONS: 1.0.0
 '''
 from math import *
 
