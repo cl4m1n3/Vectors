@@ -104,7 +104,7 @@ class Vector3:
         if len > 0:
             return self.divide(sqrt(len))
         
-        return Vector2(0, 0, 0)
+        return Vector3(0, 0, 0)
     
     def dot(self, vector: object) -> float:
         return self.x * vector.x + self.y * vector.y
